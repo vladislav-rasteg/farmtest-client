@@ -1,0 +1,115 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e9ecef;
+}
+
+.page {
+    padding: 10px;
+    display: none;
+}
+
+.navigation {
+    display: flex; /* Использование flexbox для равномерного распределения кнопок */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2); /* Тень для лучшей видимости на светлых страницах */
+}
+
+.navigation button {
+    flex-grow: 1; /* Равномерное распределение пространства между кнопками */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #6c757d;
+    border: none; /* Удаление стандартных стилей границы */
+    transition: background-color 0.3s; /* Плавное изменение фона при наведении */
+    outline: none; /* Удаление контура при фокусе */
+}
+
+.navigation button:hover {
+    background-color: #5a6268;
+}
+
+.navigation button:active {
+    background-color: #545b62; /* Еще темнее при активации */
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px; /* Увеличенный шрифт для лучшей видимости на мобильных устройствах */
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px; /* Скругление углов для современного вида */
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98); /* Небольшое уменьшение при нажатии для эффекта кнопки */
+}
+
+/* Стили для контейнеров продуктов */
+#potato, #carrot {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+#potato p, #carrot p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Стили для счетчика количества */
+#potato span, #carrot span {
+    margin: 0 10px;
+    font-size: 16px; /* Четкое отображение на мобильных устройствах */
+}
+
+/* Улучшенные стили для кнопок + и - */
+button.quantity-change {
+    padding: 8px 12px; /* Немного меньше, чтобы подходить для + и - */
+    min-width: 40px; /* Минимальная ширина для удобства нажатия на мобильных устройствах */
+    font-size: 18px; /* Большой текст для легкости использования */
+}
+
+/* Улучшения адаптивности */
+@media (max-width: 768px) {
+    button {
+        padding: 12px 24px; /* Больше пространства для удобства на маленьких экранах */
+        font-size: 18px; /* Увеличение размера текста для лучшей читаемости */
+    }
+
+    button.quantity-change {
+        min-width: 50px; /* Увеличение для легкости нажатия на маленьких экранах */
+    }
+}
+
+/* Адаптация стилей для маленьких экранов */
+@media (max-width: 768px) {
+    .navigation button {
+        padding: 12px 10px; /* Увеличенный отступ для лучшей доступности */
+        font-size: 18px; /* Больший шрифт для лучшей видимости */
+    }
+}
+
+/* Адаптация стилей для очень маленьких экранов */
+@media (max-width: 480px) {
+    .navigation button {
+        padding: 15px 10px; /* Дополнительный отступ для удобства на самых маленьких устройствах */
+        font-size: 14px; /* Меньший шрифт для сохранения места */
+    }
+}
