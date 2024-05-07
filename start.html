@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная игра</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .screen {
+            display: none;
+        }
+        .active-screen {
+            display: block;
+        }
+        .navigation {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="screen1" class="screen active-screen">
+        <h1>Экран 1</h1>
+        <p>Содержимое экрана 1</p>
+    </div>
+    <div id="screen2" class="screen">
+        <h1>Экран 2</h1>
+        <p>Содержимое экрана 2</p>
+    </div>
+    <div id="screen3" class="screen">
+        <h1>Экран 3</h1>
+        <p>Содержимое экрана 3</p>
+    </div>
+    <div id="screen4" class="screen">
+        <h1>Экран 4</h1>
+        <p>Содержимое экрана 4</p>
+    </div>
+    <div id="screen5" class="screen">
+        <h1>Экран 5</h1>
+        <p>Содержимое экрана 5</p>
+    </div>
+</div>
+<div class="navigation">
+    <button class="nav-button" onclick="changeScreen(1)">Экран 1</button>
+    <button class="nav-button" onclick="changeScreen(2)">Экран 2</button>
+    <button class="nav-button" onclick="changeScreen(3)">Экран 3</button>
+    <button class="nav-button" onclick="changeScreen(4)">Экран 4</button>
+    <button class="nav-button" onclick="changeScreen(5)">Экран 5</button>
+</div>
+
+<script>
+    let currentScreen = 1;
+
+    function changeScreen(screenNumber) {
+        document.getElementById('screen' + currentScreen).classList.remove('active-screen');
+        document.getElementById('screen' + screenNumber).classList.add('active-screen');
+        currentScreen = screenNumber;
+    }
+</script>
+</body>
+</html>
