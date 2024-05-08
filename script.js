@@ -35,6 +35,3 @@ function navigate(page) {
     }
     document.getElementById(page).style.display = 'block';
 }
-tonConnectUI.uiOptions = {
-    twaReturnUrl: 'https://t.me/farmer_2000_Test_bot?game=farmer2000Test'
-};
