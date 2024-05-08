@@ -35,3 +35,4 @@ function navigate(page) {
     }
     document.getElementById(page).style.display = 'block';
 }
+
