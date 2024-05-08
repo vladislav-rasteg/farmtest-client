@@ -13,7 +13,3 @@ async function connectToWallet() {
 connectToWallet().catch(error => {
     console.error("Error connecting to wallet:", error);
 });
-
-tonConnectUI.uiOptions = {
-    twaReturnUrl: 'https://t.me/farmer_2000_Test_bot?game=farmer2000Test'
-};
