@@ -16,5 +16,5 @@ connectToWallet().catch(error => {
 
 
 tonConnectUI.uiOptions = {
-    twaReturnUrl: 'https://t.me/farmer_2000_Test_bot?game=farmer2000Test'
+    twaReturnUrl: 'https://t.me/farmer_2000_Test_bot/farmer_2000_Test_webapp'
 };
